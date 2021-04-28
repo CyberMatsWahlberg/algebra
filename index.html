@@ -24,10 +24,11 @@ c= <input type="text" id="myText" value="">
 
 	function myFunction() {
 	  var x = document.getElementById("myText");
-	  var correctVal = "b/a";
+	  var b = generateRandomLetter()
+	  var correctVal = b+ "/a";
 	  var currentVal = x.value;
 
-	  document.getElementById("question").innerHTML = "a=b/c"
+	  document.getElementById("question").innerHTML = "a=" + b + "/c"
 	  
 	  if (currentVal == correctVal) {
 	    document.getElementById("demo").innerHTML = "Rätt svar"
