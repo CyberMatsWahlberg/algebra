@@ -5,27 +5,37 @@
 </head>
 <body>
 <h1>Algebra</h1>
-<p>a=b/c</p>
+<button type="button" onclick="myFunction()">Start</button>
+
+<p id="question"></p>
 
 c= <input type="text" id="myText" value="">
-<button type="button" onclick="myFunction()">Try it</button>
+
 
 <p id="demo"></p>
 
 <script>
-function myFunction() {
-  var x = document.getElementById("myText");
-  var correctVal = "b/a";
-  var currentVal = x.value;
-  //document.getElementById("demo").innerHTML = "Rätt svar"
-  //document.getElementById("demo").innerHTML = "Fel svar. Korrekta svar är: " + correctVal;
-  
-  if (currentVal == correctVal) {
-    document.getElementById("demo").innerHTML = "Rätt svar"
-  } else {
-    document.getElementById("demo").innerHTML = "Fel svar. Korrekta svar är: " + correctVal;
-  }
-}
+
+	function generateRandomLetter() {
+ 		const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+
+  		return alphabet[Math.floor(Math.random() * alphabet.length)]
+	}
+
+	function myFunction() {
+	  var x = document.getElementById("myText");
+	  var correctVal = "b/a";
+	  var currentVal = x.value;
+
+	  document.getElementById("question").innerHTML = "a=b/c"
+	  
+	  if (currentVal == correctVal) {
+	    document.getElementById("demo").innerHTML = "Rätt svar"
+	  } else {
+	    document.getElementById("demo").innerHTML = "Fel svar. Korrekta svar är: " + correctVal;
+	  }
+	}
+
 </script>
 
 </body>
